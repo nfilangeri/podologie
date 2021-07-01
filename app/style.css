@@ -201,7 +201,7 @@ body > header > div > img {
 }
 
 #section--2 > div.bio__banner {
-  height: 700px;
+  max-height: fit-content;
 }
 
 #section--2 > div.bio__banner > div:nth-child(1) > div:nth-child(1) {
