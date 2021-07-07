@@ -551,8 +551,8 @@ main {
   color: var(--orange);
 }
 
-@media (min-width: 526px) {
-  #carousel,
+@media (max-width: 526px) {
+  /* #carousel,
   #carousel li,
   img {
     width: 100%;
@@ -562,7 +562,7 @@ main {
   #carousel li img {
     width: 100%;
     max-width: 343px;
-  }
+  } */
 
   .slider {
     height: 140rem;
