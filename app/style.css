@@ -364,7 +364,7 @@ body > div.collab__banner > div > div:nth-child(2) > img {
 
 /* SLIDER */
 .slider {
-  height: 140rem;
+  height: 100rem;
   margin: 0 auto;
   position: relative;
 }
@@ -529,7 +529,6 @@ body > div.collab__banner > div > div:nth-child(2) > img {
   height: 690px;
   width: 500px;
   border-radius: 1rem;
-  background: transparent;
 }
 /** || General Styles */
 
@@ -552,12 +551,6 @@ main {
   color: var(--orange);
 }
 
-img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-}
-
 @media (min-width: 526px) {
   #carousel,
   #carousel li,
@@ -565,4 +558,17 @@ img {
     width: 100%;
     max-width: 512px;
   }
+
+  #carousel li img {
+    width: 100%;
+    max-width: 343px;
+  }
+
+  .slider {
+    height: 140rem;
+  }
 }
+
+/* @media (min-width: 150px) {
+
+}) */
