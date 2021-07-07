@@ -22,7 +22,6 @@
     <header class="header">
       <div class="header__title">
         <!-- logo dans barre de navigation -->
-        <img src="img/logo.png" class="header__img" alt="logo__pied" />
         <h1>
           Cabinet de
           <!-- Green highlight effect -->
@@ -30,8 +29,8 @@
           à
           <span class="highlight">Chavornay</span>
         </h1>
+        <img src="img/logo (2).png" class="header__img" alt="logo__pied" />
       </div>
-
       <nav class="nav">
         <ul class="nav__links">
           <li class="nav__item">
@@ -71,12 +70,10 @@
 
     <section class="section" id="section--2">
       <div class="section__title">
-        <h3 class="section__header">Qui sommes-nous?</h3>
-      </div>
-      <div class="row">
-        <div class="col-12 col-lg-8 col-md-6 col-sm-4 default-2">
-          <div><h2>Charlotte Paquier</h2></div>
-          <div>
+        <div class="texte__bio">
+          <h3 class="section__header">Qui sommes-nous?</h3>
+          <h2>Charlotte Paquier</h2>
+          <p>
             Je quitte le domaine de la pharmacie en août 2014 pour commencer
             trois ans d’études à l’Ecole supérieure de podologues à Genève. En
             juin 2017, j’obtiens mon diplôme de podologue ES. Passionnée de
@@ -84,29 +81,57 @@
             <br />C’est avec beaucoup de motivation que j’installe mon cabinet
             dans le centre de réathlésitation et de rééducation physique appelé
             Reactyv8. Un magnifique projet promettant de belles collaborations.
-          </div>
-          <div class="col-12 col-lg-4 col-md-6 col-sm-4 default-2">
-            <div class="img__bio"><img src="img/charlottebio.png" /></div>
-            <div>
-              <div><h2>Charlotte Paquier</h2></div>
-              <div>
-                Je quitte le domaine de la pharmacie en août 2014 pour commencer
-                trois ans d’études à l’Ecole supérieure de podologues à Genève.
-                En juin 2017, j’obtiens mon diplôme de podologue ES. Passionnée
-                de montagne, je décide de me diriger dans la podologie du
-                sport.<br />
-                <br />C’est avec beaucoup de motivation que j’installe mon
-                cabinet dans le centre de réathlésitation et de rééducation
-                physique appelé Reactyv8. Un magnifique projet promettant de
-                belles collaborations.
-              </div>
-            </div>
-            <div class="img__bio"><img src="img/charlottebio.png" /></div>
-          </div>
+          </p>
         </div>
       </div>
-    </section>
 
+      <ul id="carousel">
+        <li style="opacity: 1">
+          <img src="img/_DSC1400.jpg" alt />
+        </li>
+        <li>
+          <img src="img/_DSC1410.jpg" alt />
+        </li>
+        <li>
+          <img src="img/_DSC1427.jpg" alt />
+        </li>
+        <li>
+          <img src="img/_DSC1444.jpg" alt />
+        </li>
+        <li>
+          <img src="img/_DSC1502.jpg" alt />
+        </li>
+        <li>
+          <img src="img/_DSC1553.jpg" alt />
+        </li>
+        <li>
+          <img src="img/_DSC1616.jpg" alt />
+        </li>
+        <li>
+          <img src="img/_DSC1644.jpg" alt />
+        </li>
+        <li>
+          <img src="img/_DSC1648[9388].jpg" alt />
+        </li>
+        <li>
+          <img src="img/pied.jpg" alt />
+        </li>
+      </ul>
+
+      <script>
+        let carousel = document.getElementById('carousel'),
+          slides = carousel.getElementsByTagName('li'),
+          counter = 0,
+          liList = Array.prototype.slice.call(slides);
+
+        setInterval(function () {
+          slides[counter].style.opacity = 0; // Hide the previous image
+          counter = (counter + 1) % slides.length; // Increment counter
+          slides[counter].style.opacity = 1; // Show the next image
+        }, 5000); // setInterval
+      </script>
+    </section>
+    <base />
     <!-- Section Prestations -->
 
     <section class="section" id="section--3">
@@ -360,23 +385,5 @@
         &copy; Copyright by <span>Podologie Chavornay</span>
       </p>
     </footer>
-    <!-- 
-    <div class="modal hidden">
-      <button class="btn--close-modal">&times;</button>
-      <h2 class="modal__header">
-        Open your bank account <br />
-        in just <span class="highlight">5 minutes</span>
-      </h2>
-      <form class="modal__form">
-        <label>First Name</label>
-        <input type="text" />
-        <label>Last Name</label>
-        <input type="text" />
-        <label>Email Address</label>
-        <input type="email" />
-        <button class="btn">Next step &rarr;</button>
-      </form>
-    </div>
-    <div class="overlay hidden"></div> -->
   </body>
 </html>

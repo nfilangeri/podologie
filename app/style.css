@@ -36,12 +36,18 @@ body {
 /* GENERAL ELEMENTS */
 .section {
   padding: 7rem 3rem;
-  border-top: 1px solid #ddd;
   transition: transform 1s, opacity 1s;
+}
+
+#section--5 {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
 }
 
 #section--3 {
   margin-bottom: 15rem;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
 }
 
 .section--hidden {
@@ -52,6 +58,8 @@ body {
 .section__title {
   max-width: 80rem;
   margin: 0 auto 8rem auto;
+  display: flex;
+  justify-content: center;
 }
 
 .section__description {
@@ -68,25 +76,15 @@ body {
   font-weight: 500;
 }
 
-.bio__banner {
-  background-color: rgb(116, 116, 116);
-  color: rgba(255, 255, 255, 0.95);
-  display: grid;
-  grid-template-columns: 3fr 1fr 3fr 1fr;
+#section--2 {
+  display: flex;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
 }
 
-#section--2 > div.bio__banner > div:nth-child(1) > div:nth-child(1) > h2 {
-  padding-top: 55px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid rgb(187, 187, 187);
-  font-size: xx-large;
-}
-
-#section--2 > div.bio__banner > div:nth-child(3) > div:nth-child(1) > h2 {
-  padding-top: 55px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid rgb(187, 187, 187);
-  font-size: xx-large;
+.texte__bio {
+  max-width: 1000px;
+  margin-right: 10px;
 }
 
 p {
@@ -106,10 +104,11 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 8rem;
+  height: 4rem;
   width: 100%;
   padding: 0 10rem;
-  z-index: 100;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
 }
 
 /* nav and stickly class */
@@ -129,8 +128,6 @@ img {
   width: 100vw;
   align-items: center;
   list-style: none;
-  position: relative;
-  bottom: 200px;
   padding-right: 15%;
 }
 
@@ -190,67 +187,22 @@ img {
 
 /* HEADER */
 .header {
-  height: 25vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-body > header > div > img {
-  padding-top: 15%;
-}
-
-#section--2 > div.bio__banner {
-  max-height: fit-content;
-}
-
-#section--2 > div.bio__banner > div:nth-child(1) > div:nth-child(1) {
-  width: 70%;
-  padding-left: 10%;
-}
-
-#section--2 > div.bio__banner > div:nth-child(1) > div:nth-child(2) {
-  width: 70%;
-  padding-left: 10%;
-  padding-top: 30px;
-}
-
-#section--2 > div.bio__banner > div:nth-child(3) > div:nth-child(2) {
-  width: 70%;
-  padding-left: 10%;
-  padding-top: 5%;
-}
-
-#section--2 > div.bio__banner > div:nth-child(3) > div:nth-child(1) {
-  width: 70%;
-  padding-left: 10%;
-}
-
-.img__bio {
-  padding-right: 70px;
-  padding-top: 25%;
-}
-
-body > header > div > h1 {
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 .header__title {
-  flex: 1;
-  padding-top: 15px;
-  max-width: 115rem;
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  align-content: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
 }
 
 .header__img {
-  width: 100%;
-  height: 80%;
-  grid-column: 2 / 3;
-  grid-row: 1 / span 2;
-  transform: translateY(-6rem);
+  width: 20%;
+  height: 30%;
 }
 
 h1 {
@@ -384,7 +336,10 @@ body > div.collab__banner > div > div:nth-child(2) > img {
 #section--4 > div.features > div:nth-child(4) > div:nth-child(2) > ul {
   list-style: none;
 }
-
+#section--4 {
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+}
 .features__icon {
   display: flex;
   align-items: center;
@@ -409,7 +364,7 @@ body > div.collab__banner > div > div:nth-child(2) > img {
 
 /* SLIDER */
 .slider {
-  height: 50rem;
+  height: 140rem;
   margin: 0 auto;
   position: relative;
 }
@@ -425,12 +380,10 @@ body > div.collab__banner > div > div:nth-child(2) > img {
   grid-template-rows: 2fr 2fr 2fr;
   column-gap: 2rem;
   row-gap: 2rem;
-  /* THIS creates the animation! */
   transition: transform 1s;
 }
 
 .slide > img {
-  /* Only for images that have different size than slide */
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -539,4 +492,77 @@ body > div.collab__banner > div > div:nth-child(2) > img {
   color: #bbb;
   font-size: 1.5rem;
   font-weight: 400;
+}
+
+/* SLIDER BIO */
+
+.slider__bio img {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.7rem;
+}
+
+#carousel {
+  width: 510px;
+  height: 700px;
+  position: relative;
+  padding: 5px;
+  background: #fff transparent;
+  margin: 15px auto;
+  box-shadow: 0 15px 35px -15px #656565;
+  border-radius: 1rem;
+}
+#carousel li {
+  opacity: 0;
+  list-style: outside none none;
+  position: absolute;
+  background: transparent;
+  transition: opacity 1s;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.7rem;
+}
+
+#carousel li img {
+  height: 690px;
+  width: 500px;
+  border-radius: 1rem;
+  background: transparent;
+}
+/** || General Styles */
+
+:root {
+  --orange: #fe5d26ff;
+}
+
+header,
+main {
+  display: grid;
+  place-items: center;
+  min-width: 300px;
+}
+
+main {
+  padding-bottom: 20rem;
+}
+
+.h2--highlight {
+  color: var(--orange);
+}
+
+img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+@media (min-width: 526px) {
+  #carousel,
+  #carousel li,
+  img {
+    width: 100%;
+    max-width: 512px;
+  }
 }
